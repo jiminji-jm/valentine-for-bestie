@@ -1,94 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Bestie 🤍</title>
+// Basic Information
+valentineName: "Jade"                    // Your Valentine's name
+pageTitle: "Will You Be My Valentine? 💝" // Browser tab title
 
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #f1f3f5;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    text-align: center;
+// Floating Background Elements
+floatingEmojis: {
+    hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Heart emojis in background
+    bears: ['🧸', '🐻']                       // Bear emojis in background
 }
 
-h1 {
-    font-size: 42px;
-    color: #212529; /* darker */
-    margin-bottom: 10px;
+// Questions and Buttons
+questions: {
+    first: {
+        text: "Do you like me?",                   // First question
+        yesBtn: "Yes",                             // Yes button text
+        noBtn: "No",                               // No button text
+        secretAnswer: "I don't like you, I love you! ❤️"  // Hidden message
+    },
+    second: {
+        text: "How much do you love me?",          // Second question
+        startText: "This much!",                   // Text before percentage
+        nextBtn: "Next ❤️"                         // Next button text
+    },
+    third: {
+        text: "Will you be my Valentine...?",      // Final question
+        yesBtn: "Yes!",                            // Yes button text
+        noBtn: "No"                                // No button text
+    }
 }
 
-p {
-    font-size: 20px;
-    color: #343a40; /* darker readable */
-    margin-bottom: 40px;
+// Love Meter Messages
+loveMessages: {
+    extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows above 5000%
+    high: "To infinity and beyond! 🚀💝",              // Shows above 1000%
+    normal: "And beyond! 🥰"                           // Shows above 100%
 }
 
-button {
-    padding: 14px 35px;
-    font-size: 16px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    transition: 0.2s ease;
+// Final Celebration
+celebration: {
+    title: "Yay! I'm the luckiest person...",     // Celebration title
+    message: "Now come get your gift...",          // Celebration message
+    emojis: "🎁💖🤗💝💋❤️💕"                        // Celebration emojis
 }
 
-#yesBtn {
-    background-color: #212529;
-    color: white;
-    left: 42%;
-    top: 60%;
+// Website Colors
+colors: {
+    backgroundStart: "#ffafbd",      // Background gradient start
+    backgroundEnd: "#ffc3a0",        // Background gradient end
+    buttonBackground: "#ff6b6b",     // Button color
+    buttonHover: "#ff8787",          // Button hover color
+    textColor: "#ff4757"            // Text color
 }
 
-#noBtn {
-    background-color: #ced4da;
-    color: #212529;
-    left: 55%;
-    top: 60%;
+// Animation Settings
+animations: {
+    floatDuration: "15s",           // How long hearts float (10-20s)
+    floatDistance: "50px",          // Sideways movement (30-70px)
+    bounceSpeed: "0.5s",            // Bounce animation speed (0.3-0.7s)
+    heartExplosionSize: 1.5         // Final heart explosion size (1.2-2.0)
 }
 
-#message {
-    margin-top: 120px;
-    font-size: 26px;
-    color: #212529;
-    display: none;
-    font-weight: 500;
+// Music Settings
+music: {
+    enabled: true, // Music feature is enabled
+    autoplay: true, // Try to autoplay (note: some browsers may block this)
+    musicUrl: "YOUR_CLOUDINARY_URL_HERE", // Paste your music URL here
+    startText: "🎵 Play Music", // Button text to start music
+    stopText: "🔇 Stop Music", // Button text to stop music
+    volume: 0.5 // Volume level (0.0 to 1.0)
 }
-</style>
-</head>
-
-<body>
-
-<h1>Bestie 🤍</h1>
-<p>Will you be my Valentine?</p>
-
-<button id="yesBtn" onclick="sayYes()">Yes 🤍</button>
-<button id="noBtn">No</button>
-
-<div id="message">
-    You just made my whole year better 🤍✨
-</div>
-
-<script>
-const noBtn = document.getElementById("noBtn");
-
-noBtn.addEventListener("mouseover", function() {
-    const x = Math.random() * (window.innerWidth - 120);
-    const y = Math.random() * (window.innerHeight - 60);
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
-});
-
-function sayYes() {
-    document.getElementById("message").style.display = "block";
-}
-</script>
-
-</body>
-</html>
